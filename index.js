@@ -20,15 +20,15 @@ const dbRoute =
 mongoose.connect(process.env.MONGODB_URI || dbRoute, {
   useNewUrlParser: true
 });
-let connection = mongoose.connection;
+// let connection = mongoose.connection;
 
-connection.once("open", () => console.log("connected to the database"));
+// connection.once("open", () => console.log("connected to the database"));
 
-// checks if connection with the database is successful
-connection.on(
-  "error",
-  console.error.bind(console, "MongoDB connection error:")
-);
+// // checks if connection with the database is successful
+// connection.on(
+//   "error",
+//   console.error.bind(console, "MongoDB connection error:")
+// );
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
